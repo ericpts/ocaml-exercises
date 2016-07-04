@@ -1,9 +1,14 @@
 #!/bin/bash
 
 function test {
-  echo "Testing $1"
-  ocamlc "$1"
-  ./a.out
+  echo -n "$1 "
+  ocamlc "$1" && ./a.out &>/dev/null
+
+  if [ $? -eq 0 ]; then
+    echo "OK"
+  else
+    echo "Incorrect"
+  fi
 
   rm a.out *\.cm{i,o}
 }
