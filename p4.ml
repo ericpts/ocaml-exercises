@@ -8,3 +8,6 @@ let length list =
   _length 0 list
 ;;
 
+assert(length [ "a" ; "b" ; "c"] = 3);;
+
+assert(length [] = 0);;
