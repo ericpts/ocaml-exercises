@@ -13,6 +13,6 @@ function test {
   rm a.out *\.cm{i,o}
 }
 
-for i in `seq 1 5`; do
+for i in `seq 1 6`; do
   test p$i.ml
 done
